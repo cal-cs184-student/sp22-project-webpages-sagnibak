@@ -1,0 +1,3 @@
+### Part 2: Antialiasing triangles 
+
+To properly antialias, we resized the sample buffer by `sqrt{sampling_rate}` in both height and width dimensions. To avoid any potential floating point issues, we opted to scale our triangle up and traverse through the triangle in whole increments. Then, to render the image at the original size, in `resolve_to_framebuffer`, we take `sampling rate` number of samples (corresponds to one pixel) and update the `rgb_framebuffer`.
