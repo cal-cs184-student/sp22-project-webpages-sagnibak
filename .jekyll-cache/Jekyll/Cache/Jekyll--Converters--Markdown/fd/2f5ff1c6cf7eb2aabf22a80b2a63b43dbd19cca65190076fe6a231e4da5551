@@ -1,4 +1,4 @@
-I"�<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+I"<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
 
 <h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
 
@@ -20,9 +20,33 @@ sample buffer with the color of the triangle.</p>
 <p><img src="../proj1/task2_img/test4_16.png" alt="imag" /></p>
 <h3 id="part-2-antialiasing-triangles">Part 2: Antialiasing triangles</h3>
 
-<p>To properly antialias, we resized the sample buffer by <code class="language-plaintext highlighter-rouge">sqrt{sampling_rate}</code> in both height and width dimensions. To avoid any potential floating point issues, we opted to scale our triangle up and traverse through the triangle in whole increments. Then, to render the image at the original size, in <code class="language-plaintext highlighter-rouge">resolve_to_framebuffer</code>, we take <code class="language-plaintext highlighter-rouge">sampling rate</code> number of samples (corresponds to one pixel) and update the <code class="language-plaintext highlighter-rouge">rgb_framebuffer</code>.</p>
+<p>To properly antialias, we resized the sample buffer by <code class="language-plaintext highlighter-rouge">sqrt{sampling_rate}</code> in both height and width dimensions. To avoid any potential floating point issues, we opted to scale our triangle up and traverse through the triangle in whole increments as opposed to keeping the triangle the same size and incrementing the traversals in fractional amounts. In the event that the point lies inside the triangle, we update the <code class="language-plaintext highlighter-rouge">sample buffer</code> to the color. Then, to render the image at the original size, in <code class="language-plaintext highlighter-rouge">resolve_to_framebuffer</code>, we take the average of <code class="language-plaintext highlighter-rouge">sampling rate</code> number of samples (a square that corresponds to one pixel) and update the <code class="language-plaintext highlighter-rouge">rgb_framebuffer</code> (the actual image rendering). This antialiases the triangles by providing inbetween colors. This can be seen as applying a filter ovr a pixel getting closer and closer to the true average color of the pixel.</p>
+
+<div align="middle">
+  <table style="width=100%">
+    <tr>
+      <td>
+        <img src="../proj1/task2_img/task2_1.png" align="middle" width="400px" />
+        <figcaption align="middle">Sample rate: 1.</figcaption>
+      </td>
+      <td>
+        <img src="../proj1/task2_img/task2_4.png" align="middle" width="400px" />
+        <figcaption align="middle">Sample rate: 4.</figcaption>
+      </td>
+       <td>
+        <img src="../proj1/task2_img/task2_16.png" align="middle" width="400px" />
+        <figcaption align="middle">Sample rate: 16.</figcaption>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<p>The difference between sample rate 1 and sample rate 16 can be seen very clearly in the very skinny triangle corner. As we take more samples we can better approximate the true color. When we don’t supersample, because the triangle is skinny, probabilistically supersampling will better approximate the pixel. However, in practice, there will be situations where it just so happens that the point you sample ends up being inside the triangle. This is why even when the sample rate is 16, the zoomed in image isn’t smooth.</p>
 <h3 id="part-3-transforms">Part 3: Transforms</h3>
 
+<p>For this, I was trying to get the robot’s right arm to wave. I accomplished this by rotating the arms.</p>
+
+<p><img src="../proj1/task3_img/screenshot_2-16_15-50-48.png" alt="waving_robot" /></p>
 <h2 id="task-4-barycentric-coordinates">Task 4: Barycentric Coordinates</h2>
 
 <p>Barycentric coordinates can be seen as a way to figure out the

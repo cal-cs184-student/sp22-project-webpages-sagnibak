@@ -21,7 +21,7 @@ plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-t
 
 # Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
 title:		           'CS 184 Projects'
-description:	       'by Catherine and Sagnick'
+description:	       'Computer Graphics at UC Berkeley'
 author:              'Sagnik Bhattacharya and Catherine Huang'
 
 # RSS 2.0 can be used instead of Atom by uncommenting following two lines
