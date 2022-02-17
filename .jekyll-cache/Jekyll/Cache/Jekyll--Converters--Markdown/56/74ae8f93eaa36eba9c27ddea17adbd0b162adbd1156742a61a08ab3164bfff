@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-16T23:33:36-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CS 184 Projects</title><subtitle>Computer Graphics at UC Berkeley</subtitle><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><entry><title type="html">Project 1</title><link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="Project 1" /><published>2022-02-14T00:00:00-08:00</published><updated>2022-02-14T00:00:00-08:00</updated><id>http://localhost:4000/project-1</id><content type="html" xml:base="http://localhost:4000/project-1"><![CDATA[<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+I"¡<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
 
 <h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
 
@@ -85,37 +85,4 @@ rasterized version of the object, the texture is sampled at a
 specified location, either using <em>nearest</em> or <em>bilinear</em> sampling, and
 then the sampled color is painted onto the rasterized pixel.</p>
 
-<p>In order to do pixel sampling on a triangle, first we obtain the
-barycentric coordinates of the pixel in the triangle, then we use the
-barycentric coordinates to find the correct location to sample the
-texture from a triangular region whose vertices are given to us.</p>
-
-<p>In <strong>nearest sampling</strong>, the pixel in the texture nearest to the sampling
-location is chosen, and its color is painted on the triangle pixel.</p>
-
-<p>In <strong>bilinear sampling</strong>, a weighted average of the four texture
-pixels surrounding the sampling location is calculated. The weighting
-is based on the closeness of each texture pixel to the sampling
-location. This weighted average color is painted on the triangle
-pixel.</p>
-
-<h3 id="comparison-of-bilinear-vs-nearest-pixel-sampling">Comparison of Bilinear vs. Nearest Pixel Sampling</h3>
-
-<p>The four images below show a comparison of bilinear and nearest pixel
-sampling. As we can see, nearest pixel sampling is more prone to
-having rougher edges, and the colors seem somewhat noisier due to
-sharp transitions. On the other hand, bilinear sampling creates
-smoother gradients of colors, and also makes edges appear smoother
-even at lower sampling rates.</p>
-
-<p><img src="../proj1/task5_img/nearest_1pp.png" alt="" />
-<img src="../proj1/task5_img/bilinear_1pp.png" alt="" />
-<img src="../proj1/task5_img/nearest_16pp.png" alt="" />
-<img src="../proj1/task5_img/bilinear_16pp.png" alt="" /></p>
-
-<p>We believe that there will be a large difference between the
-performance of these two sampling algorithms when there is a large
-degree of texture minification, where nearest pixel sampling will be
-prone to aliasing more than bilinear sampling, since bilinear sampling
-is equivalent to low-pass filtering after taking extra samples, which
-leads to antialiasing.</p>]]></content><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><category term="journal" /><category term="project" /><summary type="html"><![CDATA[This writeup is hosted at https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/p1-lion.png" /><media:content medium="image" url="http://localhost:4000/p1-lion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+:ET
