@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-17T00:09:20-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CS 184 Projects</title><subtitle>Computer Graphics at UC Berkeley</subtitle><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><entry><title type="html">Project 1</title><link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="Project 1" /><published>2022-02-14T00:00:00-08:00</published><updated>2022-02-14T00:00:00-08:00</updated><id>http://localhost:4000/project-1</id><content type="html" xml:base="http://localhost:4000/project-1"><![CDATA[<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+I"r/<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
 
 <h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
 
@@ -17,53 +17,55 @@ it’s a corner, 1 <code class="language-plaintext highlighter-rouge">MAYBE</cod
 <code class="language-plaintext highlighter-rouge">TRUE</code>s). In the case the point is in the triangle, we update the
 sample buffer with the color of the triangle.</p>
 
-<p><img src="../assets/img/proj1_img/task1_img/task2_1.png" alt="Image 4" /></p>
+<p>«««&lt; HEAD
+<img src="../assets/proj1_img/task1_img/task2_1.png" alt="Image 4" />
+=======
+<img src="&quot;https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task1_img/task2_1.png&quot;" alt="Image 4" /></p>
+<blockquote>
+  <blockquote>
+    <blockquote>
+      <blockquote>
+        <blockquote>
+          <blockquote>
+            <blockquote>
+              <p>59aafe1c673850c43c7831faa2bb3c3d47ec422a</p>
+            </blockquote>
+          </blockquote>
+        </blockquote>
+      </blockquote>
+    </blockquote>
+  </blockquote>
+</blockquote>
 
 <h3 id="part-2-antialiasing-triangles">Part 2: Antialiasing triangles</h3>
 
-<p>To properly antialias, we resized the sample buffer by
-<code class="language-plaintext highlighter-rouge">sqrt{sampling_rate}</code> in both height and width dimensions. To avoid
-any potential floating point issues, we opted to scale our triangle up
-and traverse through the triangle in whole increments as opposed to
-keeping the triangle the same size and incrementing the traversals in
-fractional amounts. In the event that the point lies inside the
-triangle, we update the <code class="language-plaintext highlighter-rouge">sample buffer</code> to the color. Then, to render
-the image at the original size, in <code class="language-plaintext highlighter-rouge">resolve_to_framebuffer</code>, we take
-the average of <code class="language-plaintext highlighter-rouge">sampling rate</code> number of samples (a square that
-corresponds to one pixel) and update the <code class="language-plaintext highlighter-rouge">rgb_framebuffer</code> (the actual
-image rendering). This antialiases the triangles by providing
-inbetween colors. This can be seen as applying a filter ovr a pixel
-getting closer and closer to the true average color of the pixel.</p>
+<p>To properly antialias, we resized the sample buffer by <code class="language-plaintext highlighter-rouge">sqrt{sampling_rate}</code> in both height and width dimensions. To avoid any potential floating point issues, we opted to scale our triangle up and traverse through the triangle in whole increments as opposed to keeping the triangle the same size and incrementing the traversals in fractional amounts. In the event that the point lies inside the triangle, we update the <code class="language-plaintext highlighter-rouge">sample buffer</code> to the color. Then, to render the image at the original size, in <code class="language-plaintext highlighter-rouge">resolve_to_framebuffer</code>, we take the average of <code class="language-plaintext highlighter-rouge">sampling rate</code> number of samples (a square that corresponds to one pixel) and update the <code class="language-plaintext highlighter-rouge">rgb_framebuffer</code> (the actual image rendering). This antialiases the triangles by providing inbetween colors. This can be seen as applying a filter ovr a pixel getting closer and closer to the true average color of the pixel.</p>
 
-<p><img src="../assets/img/proj1_img/task2_img/task2_1.png" alt="" />
-<img src="../assets/img/proj1_img/task2_img/task2_4.png" alt="" />
-<img src="../assets/img/proj1_img/task2_img/task2_16.png" alt="" /></p>
-
-<!-- <div align="middle">
+<div align="middle">
   <table style="width=100%">
     <tr>
       <td>
-        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_1.png" align="middle" width="400px"/>
+        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_1.png" align="middle" width="400px" />
         <figcaption align="middle">Sample rate: 1.</figcaption>
       </td>
       <td>
-        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_4.png"align="middle" width="400px"/>
+        &lt;img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_4.png"align="middle" width="400px"/&gt;
         <figcaption align="middle">Sample rate: 4.</figcaption>
       </td>
        <td>
-        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_16.png" align="middle" width="400px"/>
+        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_16.png" align="middle" width="400px" />
         <figcaption align="middle">Sample rate: 16.</figcaption>
       </td>
     </tr>
   </table>
-</div> -->
+</div>
 
 <p>The difference between sample rate 1 and sample rate 16 can be seen very clearly in the very skinny triangle corner. As we take more samples we can better approximate the true color. When we don’t supersample, because the triangle is skinny, probabilistically supersampling will better approximate the pixel. However, in practice, there will be situations where it just so happens that the point you sample ends up being inside the triangle. This is why even when the sample rate is 16, the zoomed in image isn’t smooth.</p>
 <h3 id="part-3-transforms">Part 3: Transforms</h3>
 
 <p>For this, I was trying to get the robot’s right arm to wave. I accomplished this by rotating the arms.</p>
 
-<p><img src="../assets/img/proj1_img/task3_img/screenshot_2-16_15-50-48.png" alt="waving_robot" /></p>
+<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task3_img/screenshot_2-16_15-50-48.png" alt="waving_robot" /></p>
 <h2 id="task-4-barycentric-coordinates">Task 4: Barycentric Coordinates</h2>
 
 <p>Barycentric coordinates can be seen as a way to figure out the
@@ -179,4 +181,6 @@ pixel sampling reduces aliasing compared to nearest pixel sampling.</p>
 <p><img src="../assets/proj1_img/task6_img/l0pnearest.png" alt="" />
 <img src="../assets/proj1_img/task6_img/l0pbili.png" alt="" />
 <img src="../assets/proj1_img/task6_img/lnearestpbili.png" alt="" />
-<img src="../assets/proj1_img/task6_img/lnearestpnearest.png" alt="" /></p>]]></content><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><category term="journal" /><category term="project" /><summary type="html"><![CDATA[This writeup is hosted at https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/p1-lion.png" /><media:content medium="image" url="http://localhost:4000/p1-lion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<img src="../assets/proj1_img/task6_img/lnearestpnearest.png" alt="" /></p>
+
+:ET
