@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-16T22:51:31-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CS 184 Projects</title><subtitle>by Catherine and Sagnick</subtitle><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><entry><title type="html">Project 1</title><link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="Project 1" /><published>2022-02-14T00:00:00-08:00</published><updated>2022-02-14T00:00:00-08:00</updated><id>http://localhost:4000/project-1</id><content type="html" xml:base="http://localhost:4000/project-1"><![CDATA[<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+I"æ<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
 
 <h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
 
@@ -47,4 +47,6 @@ intuitive visualization of barycentric coordinates.</p>
 <p>Below is a screenshot of a color wheel made using triangles colored
 using barycentric coordinates to determine the color of the pixels.</p>
 
-<p><img src="../proj1/task4_img/color_wheel.png" alt="color_wheel" /></p>]]></content><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><category term="journal" /><category term="project" /><summary type="html"><![CDATA[This writeup is hosted at https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/p1-lion.png" /><media:content medium="image" url="http://localhost:4000/p1-lion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p><img src="../proj1/task4_img/color_wheel.png" alt="color_wheel" /></p>
+
+:ET
