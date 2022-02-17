@@ -1,4 +1,6 @@
-I"h<h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
+I"�<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+
+<h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
 
 <p>We first finding a bounding box by calculating the minimum and maximum
 x and y coordinates. For each point, we determine whether it’s inside
@@ -21,7 +23,7 @@ sample buffer with the color of the triangle.</p>
 <p>To properly antialias, we resized the sample buffer by <code class="language-plaintext highlighter-rouge">sqrt{sampling_rate}</code> in both height and width dimensions. To avoid any potential floating point issues, we opted to scale our triangle up and traverse through the triangle in whole increments. Then, to render the image at the original size, in <code class="language-plaintext highlighter-rouge">resolve_to_framebuffer</code>, we take <code class="language-plaintext highlighter-rouge">sampling rate</code> number of samples (corresponds to one pixel) and update the <code class="language-plaintext highlighter-rouge">rgb_framebuffer</code>.</p>
 <h3 id="part-3-transforms">Part 3: Transforms</h3>
 
-<h3 id="task-4-barycentric-coordinates">Task 4: Barycentric Coordinates</h3>
+<h2 id="task-4-barycentric-coordinates">Task 4: Barycentric Coordinates</h2>
 
 <p>Barycentric coordinates can be seen as a way to figure out the
 distance from the three vertices of a triangle, providing a coordinate
@@ -30,9 +32,5 @@ smoothly blend attributes at the vertices of a triangle. The attribute
 of interest for us is color in this part, but it can also be used to
 help translate between image and texture coordinates by blending the
 texture coordinates at each of the vertices.</p>
-
-<p>This is some tex that I would like to see rendered: \(\sqrt{3}\).
-This is some other text.
-Please tell me there’s no stupid extra square root somewhere here.</p>
 
 :ET
