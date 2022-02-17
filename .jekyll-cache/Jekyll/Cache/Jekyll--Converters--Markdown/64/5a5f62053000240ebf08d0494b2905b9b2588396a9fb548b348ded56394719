@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-17T00:17:07-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CS 184 Projects</title><subtitle>Computer Graphics at UC Berkeley</subtitle><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><entry><title type="html">Project 1</title><link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="Project 1" /><published>2022-02-14T00:00:00-08:00</published><updated>2022-02-14T00:00:00-08:00</updated><id>http://localhost:4000/project-1</id><content type="html" xml:base="http://localhost:4000/project-1"><![CDATA[<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+I"0-<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
 
 <h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
 
@@ -179,4 +179,6 @@ pixel sampling reduces aliasing compared to nearest pixel sampling.</p>
 <p><img src="../assets/proj1_img/task6_img/l0pnearest.png" alt="" />
 <img src="../assets/proj1_img/task6_img/l0pbili.png" alt="" />
 <img src="../assets/proj1_img/task6_img/lnearestpbili.png" alt="" />
-<img src="../assets/proj1_img/task6_img/lnearestpnearest.png" alt="" /></p>]]></content><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><category term="journal" /><category term="project" /><summary type="html"><![CDATA[This writeup is hosted at https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/p1-lion.png" /><media:content medium="image" url="http://localhost:4000/p1-lion.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<img src="../assets/proj1_img/task6_img/lnearestpnearest.png" alt="" /></p>
+
+:ET
