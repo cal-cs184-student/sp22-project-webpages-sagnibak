@@ -14,9 +14,9 @@ image rendering). This antialiases the triangles by providing
 inbetween colors. This can be seen as applying a filter ovr a pixel
 getting closer and closer to the true average color of the pixel. 
 
-![](proj1_img/task2_img/task2_1.png)
-![](proj1_img/task2_img/task2_4.png)
-![](proj1_img/task2_img/task2_16.png)
+![task2_1](assets/img/task2_1.png)
+![task2_4](assets/img/task2_4.png)
+![task2_16](assets/img/task2_16.png)
 
 <!-- <div align="middle">
   <table style="width=100%">

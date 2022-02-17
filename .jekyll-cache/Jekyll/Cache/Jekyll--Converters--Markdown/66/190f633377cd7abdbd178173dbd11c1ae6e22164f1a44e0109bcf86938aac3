@@ -1,4 +1,4 @@
-I"C.<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+I"-<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
 
 <h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
 
@@ -17,7 +17,7 @@ it’s a corner, 1 <code class="language-plaintext highlighter-rouge">MAYBE</cod
 <code class="language-plaintext highlighter-rouge">TRUE</code>s). In the case the point is in the triangle, we update the
 sample buffer with the color of the triangle.</p>
 
-<p><img src="../assets/img/proj1_img/task1_img/task2_1.png" alt="Image 4" /></p>
+<p><img src="assets/img/task1_1.png" alt="Image 4" /></p>
 
 <h3 id="part-2-antialiasing-triangles">Part 2: Antialiasing triangles</h3>
 
@@ -35,9 +35,9 @@ image rendering). This antialiases the triangles by providing
 inbetween colors. This can be seen as applying a filter ovr a pixel
 getting closer and closer to the true average color of the pixel.</p>
 
-<p><img src="../assets/img/proj1_img/task2_img/task2_1.png" alt="" />
-<img src="../assets/img/proj1_img/task2_img/task2_4.png" alt="" />
-<img src="../assets/img/proj1_img/task2_img/task2_16.png" alt="" /></p>
+<p><img src="assets/img/task2_1.png" alt="task2_1" />
+<img src="assets/img/task2_4.png" alt="task2_4" />
+<img src="assets/img/task2_16.png" alt="task2_16" /></p>
 
 <!-- <div align="middle">
   <table style="width=100%">
@@ -63,7 +63,7 @@ getting closer and closer to the true average color of the pixel.</p>
 
 <p>For this, I was trying to get the robot’s right arm to wave. I accomplished this by rotating the arms.</p>
 
-<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task3_img/screenshot_2-16_15-50-48.png" alt="waving_robot" /></p>
+<p><img src="assets/img/robot_screenshot_2-16_15-50-48.png" alt="waving_robot" /></p>
 <h2 id="task-4-barycentric-coordinates">Task 4: Barycentric Coordinates</h2>
 
 <p>Barycentric coordinates can be seen as a way to figure out the
@@ -74,7 +74,7 @@ of interest for us is color in this part, but it can also be used to
 help translate between image and texture coordinates by blending the
 texture coordinates at each of the vertices.</p>
 
-<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task4_img/color_triangle.png" alt="triangle_with_colors_at_vertices" /></p>
+<p><img src="../assets/img/proj1_img/task4_img/color_triangle.png" alt="triangle_with_colors_at_vertices" /></p>
 
 <p>The figure above demonstrates the blending of colors using barycentric
 coordinates. Each vertex is assigned a pure color: top is red $r$, left is
@@ -88,7 +88,7 @@ intuitive visualization of barycentric coordinates.</p>
 <p>Below is a screenshot of a color wheel made using triangles colored
 using barycentric coordinates to determine the color of the pixels.</p>
 
-<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task4_img/color_wheel.png" alt="color_wheel" /></p>
+<p><img src="../assets/img/proj1_img/task4_img/color_wheel.png" alt="color_wheel" /></p>
 
 <h2 id="pixel-sampling">Pixel Sampling</h2>
 

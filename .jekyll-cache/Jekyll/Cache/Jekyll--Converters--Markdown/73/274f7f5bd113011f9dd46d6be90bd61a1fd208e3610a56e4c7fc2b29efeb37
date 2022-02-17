@@ -1,4 +1,4 @@
-I"p-<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+I"-<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
 
 <h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
 
@@ -17,37 +17,53 @@ it’s a corner, 1 <code class="language-plaintext highlighter-rouge">MAYBE</cod
 <code class="language-plaintext highlighter-rouge">TRUE</code>s). In the case the point is in the triangle, we update the
 sample buffer with the color of the triangle.</p>
 
-<p><img src="../assets/img/proj1_img/task1_img/task2_1.png" alt="Image 4" /></p>
+<p><img src="assets/img/task1_1.png" alt="Image 4" /></p>
 
 <h3 id="part-2-antialiasing-triangles">Part 2: Antialiasing triangles</h3>
 
-<p>To properly antialias, we resized the sample buffer by <code class="language-plaintext highlighter-rouge">sqrt{sampling_rate}</code> in both height and width dimensions. To avoid any potential floating point issues, we opted to scale our triangle up and traverse through the triangle in whole increments as opposed to keeping the triangle the same size and incrementing the traversals in fractional amounts. In the event that the point lies inside the triangle, we update the <code class="language-plaintext highlighter-rouge">sample buffer</code> to the color. Then, to render the image at the original size, in <code class="language-plaintext highlighter-rouge">resolve_to_framebuffer</code>, we take the average of <code class="language-plaintext highlighter-rouge">sampling rate</code> number of samples (a square that corresponds to one pixel) and update the <code class="language-plaintext highlighter-rouge">rgb_framebuffer</code> (the actual image rendering). This antialiases the triangles by providing inbetween colors. This can be seen as applying a filter ovr a pixel getting closer and closer to the true average color of the pixel.</p>
+<p>To properly antialias, we resized the sample buffer by
+<code class="language-plaintext highlighter-rouge">sqrt{sampling_rate}</code> in both height and width dimensions. To avoid
+any potential floating point issues, we opted to scale our triangle up
+and traverse through the triangle in whole increments as opposed to
+keeping the triangle the same size and incrementing the traversals in
+fractional amounts. In the event that the point lies inside the
+triangle, we update the <code class="language-plaintext highlighter-rouge">sample buffer</code> to the color. Then, to render
+the image at the original size, in <code class="language-plaintext highlighter-rouge">resolve_to_framebuffer</code>, we take
+the average of <code class="language-plaintext highlighter-rouge">sampling rate</code> number of samples (a square that
+corresponds to one pixel) and update the <code class="language-plaintext highlighter-rouge">rgb_framebuffer</code> (the actual
+image rendering). This antialiases the triangles by providing
+inbetween colors. This can be seen as applying a filter ovr a pixel
+getting closer and closer to the true average color of the pixel.</p>
 
-<div align="middle">
+<p><img src="assets/img/task2_1.png" alt="task2_1" />
+<img src="assets/img/task2_4.png" alt="task2_4" />
+<img src="assets/img/task2_16.png" alt="task2_16" /></p>
+
+<!-- <div align="middle">
   <table style="width=100%">
     <tr>
       <td>
-        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_1.png" align="middle" width="400px" />
+        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_1.png" align="middle" width="400px"/>
         <figcaption align="middle">Sample rate: 1.</figcaption>
       </td>
       <td>
-        &lt;img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_4.png"align="middle" width="400px"/&gt;
+        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_4.png"align="middle" width="400px"/>
         <figcaption align="middle">Sample rate: 4.</figcaption>
       </td>
        <td>
-        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_16.png" align="middle" width="400px" />
+        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_16.png" align="middle" width="400px"/>
         <figcaption align="middle">Sample rate: 16.</figcaption>
       </td>
     </tr>
   </table>
-</div>
+</div> -->
 
 <p>The difference between sample rate 1 and sample rate 16 can be seen very clearly in the very skinny triangle corner. As we take more samples we can better approximate the true color. When we don’t supersample, because the triangle is skinny, probabilistically supersampling will better approximate the pixel. However, in practice, there will be situations where it just so happens that the point you sample ends up being inside the triangle. This is why even when the sample rate is 16, the zoomed in image isn’t smooth.</p>
 <h3 id="part-3-transforms">Part 3: Transforms</h3>
 
 <p>For this, I was trying to get the robot’s right arm to wave. I accomplished this by rotating the arms.</p>
 
-<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task3_img/screenshot_2-16_15-50-48.png" alt="waving_robot" /></p>
+<p><img src="assets/img/screenshot_2-16_15-50-48.png" alt="waving_robot" /></p>
 <h2 id="task-4-barycentric-coordinates">Task 4: Barycentric Coordinates</h2>
 
 <p>Barycentric coordinates can be seen as a way to figure out the
@@ -58,7 +74,7 @@ of interest for us is color in this part, but it can also be used to
 help translate between image and texture coordinates by blending the
 texture coordinates at each of the vertices.</p>
 
-<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task4_img/color_triangle.png" alt="triangle_with_colors_at_vertices" /></p>
+<p><img src="../assets/img/proj1_img/task4_img/color_triangle.png" alt="triangle_with_colors_at_vertices" /></p>
 
 <p>The figure above demonstrates the blending of colors using barycentric
 coordinates. Each vertex is assigned a pure color: top is red $r$, left is
@@ -72,7 +88,7 @@ intuitive visualization of barycentric coordinates.</p>
 <p>Below is a screenshot of a color wheel made using triangles colored
 using barycentric coordinates to determine the color of the pixels.</p>
 
-<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task4_img/color_wheel.png" alt="color_wheel" /></p>
+<p><img src="../assets/img/proj1_img/task4_img/color_wheel.png" alt="color_wheel" /></p>
 
 <h2 id="pixel-sampling">Pixel Sampling</h2>
 
