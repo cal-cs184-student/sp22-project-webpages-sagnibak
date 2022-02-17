@@ -1,4 +1,4 @@
-## Part 1: Rasterizing single-color triangles
+## Task 1: Rasterizing single-color triangles
 
 We first finding a bounding box by calculating the minimum and maximum
 x and y coordinates. For each point, we determine whether it's inside

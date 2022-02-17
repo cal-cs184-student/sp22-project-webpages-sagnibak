@@ -1,4 +1,4 @@
-## Pixel Sampling
+## Task 5: Pixel Sampling
 
 Pixel sampling is the process of using the pixels of one image to
 color the pixels of another image, by sampling the pixels of the

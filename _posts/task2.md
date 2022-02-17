@@ -1,4 +1,4 @@
-### Part 2: Antialiasing triangles 
+## Task 2: Antialiasing triangles 
 
 To properly antialias, we resized the sample buffer by
 `sqrt{sampling_rate}` in both height and width dimensions. To avoid

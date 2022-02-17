@@ -1,4 +1,4 @@
-## Part 6: Level sampling for texture mapping
+## Task 6: Level sampling for texture mapping
 
 We level sample to figure out the correct resolution of textures to
 use in our image. To write this helper function, we first calculate

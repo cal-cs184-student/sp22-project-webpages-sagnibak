@@ -1,4 +1,4 @@
-### Part 3: Transforms
+## Task 3: Transforms
 
 For this, I was trying to get the robot's right arm to wave. I accomplished this by rotating the arms. 
 

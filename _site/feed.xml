@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-17T11:09:14-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CS 184 Projects</title><subtitle>Computer Graphics at UC Berkeley</subtitle><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><entry><title type="html">Project 1</title><link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="Project 1" /><published>2022-02-14T00:00:00-08:00</published><updated>2022-02-14T00:00:00-08:00</updated><id>http://localhost:4000/project-1</id><content type="html" xml:base="http://localhost:4000/project-1"><![CDATA[<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-17T11:14:48-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CS 184 Projects</title><subtitle>Computer Graphics at UC Berkeley</subtitle><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><entry><title type="html">Project 1</title><link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="Project 1" /><published>2022-02-14T00:00:00-08:00</published><updated>2022-02-14T00:00:00-08:00</updated><id>http://localhost:4000/project-1</id><content type="html" xml:base="http://localhost:4000/project-1"><![CDATA[<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
 
-<h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
+<h2 id="task-1-rasterizing-single-color-triangles">Task 1: Rasterizing single-color triangles</h2>
 
 <p>We first finding a bounding box by calculating the minimum and maximum
 x and y coordinates. For each point, we determine whether it’s inside
@@ -19,7 +19,7 @@ sample buffer with the color of the triangle.</p>
 
 <p><img src="assets/img/task1_1.png" alt="Image 4" /></p>
 
-<h3 id="part-2-antialiasing-triangles">Part 2: Antialiasing triangles</h3>
+<h2 id="task-2-antialiasing-triangles">Task 2: Antialiasing triangles</h2>
 
 <p>To properly antialias, we resized the sample buffer by
 <code class="language-plaintext highlighter-rouge">sqrt{sampling_rate}</code> in both height and width dimensions. To avoid
@@ -59,7 +59,7 @@ getting closer and closer to the true average color of the pixel.</p>
 </div> -->
 
 <p>The difference between sample rate 1 and sample rate 16 can be seen very clearly in the very skinny triangle corner. As we take more samples we can better approximate the true color. When we don’t supersample, because the triangle is skinny, probabilistically supersampling will better approximate the pixel. However, in practice, there will be situations where it just so happens that the point you sample ends up being inside the triangle. This is why even when the sample rate is 16, the zoomed in image isn’t smooth.</p>
-<h3 id="part-3-transforms">Part 3: Transforms</h3>
+<h2 id="task-3-transforms">Task 3: Transforms</h2>
 
 <p>For this, I was trying to get the robot’s right arm to wave. I accomplished this by rotating the arms.</p>
 
@@ -90,7 +90,7 @@ using barycentric coordinates to determine the color of the pixels.</p>
 
 <p><img src="assets/img/color_wheel.png" alt="color_wheel" /></p>
 
-<h2 id="pixel-sampling">Pixel Sampling</h2>
+<h2 id="task-5-pixel-sampling">Task 5: Pixel Sampling</h2>
 
 <p>Pixel sampling is the process of using the pixels of one image to
 color the pixels of another image, by sampling the pixels of the
@@ -137,7 +137,7 @@ prone to aliasing more than bilinear sampling, since bilinear sampling
 is equivalent to low-pass filtering after taking extra samples, which
 leads to antialiasing.</p>
 
-<h2 id="part-6-level-sampling-for-texture-mapping">Part 6: Level sampling for texture mapping</h2>
+<h2 id="task-6-level-sampling-for-texture-mapping">Task 6: Level sampling for texture mapping</h2>
 
 <p>We level sample to figure out the correct resolution of textures to
 use in our image. To write this helper function, we first calculate
