@@ -6,15 +6,15 @@ To properly antialias, we resized the sample buffer by `sqrt{sampling_rate}` in 
   <table style="width=100%">
     <tr>
       <td>
-        <img src="../proj1/task2_img/task2_1.png" align="middle" width="400px"/>
+        <img src="../assets/proj1_img/task2_img/task2_1.png" align="middle" width="400px"/>
         <figcaption align="middle">Sample rate: 1.</figcaption>
       </td>
       <td>
-        <img src="../proj1/task2_img/task2_4.png" align="middle" width="400px"/>
+        <img src="../assets/proj1_img/task2_img/task2_4.png"align="middle" width="400px"/>
         <figcaption align="middle">Sample rate: 4.</figcaption>
       </td>
        <td>
-        <img src="../proj1/task2_img/task2_16.png" align="middle" width="400px"/>
+        <img src="../assets/proj1_img/task2_img/task2_16.png" align="middle" width="400px"/>
         <figcaption align="middle">Sample rate: 16.</figcaption>
       </td>
     </tr>
