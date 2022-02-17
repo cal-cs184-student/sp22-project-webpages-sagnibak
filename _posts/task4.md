@@ -8,7 +8,7 @@ of interest for us is color in this part, but it can also be used to
 help translate between image and texture coordinates by blending the
 texture coordinates at each of the vertices.
 
-![triangle_with_colors_at_vertices](../proj1/task4_img/color_triangle.png)
+![triangle_with_colors_at_vertices](../assets/proj1_img/task4_img/color_triangle.png)
 
 The figure above demonstrates the blending of colors using barycentric
 coordinates. Each vertex is assigned a pure color: top is red $r$, left is
@@ -22,4 +22,4 @@ intuitive visualization of barycentric coordinates.
 Below is a screenshot of a color wheel made using triangles colored
 using barycentric coordinates to determine the color of the pixels.
 
-![color_wheel](../proj1/task4_img/color_wheel.png)
+![color_wheel](../assets/proj1_img/task4_img/color_wheel.png)
