@@ -32,4 +32,12 @@ sampling, where we need to access different mip maps stored in
 relatively faraway memory locations in a single function call.
 
 Below we show the differences of the required combinations of level
-and pixel sampling methods.
+and pixel sampling methods. As we can see, with a 1 pixel
+supersampling rate, level zero sampling leads to worse aliasing.
+Nearest level sampling leads to lower minification artifacts. Bilinear
+pixel sampling reduces aliasing compared to nearest pixel sampling.
+
+![](../assets/proj1_img/task6_img/l0pnearest.png)
+![](../assets/proj1_img/task6_img/l0pbili.png)
+![](../assets/proj1_img/task6_img/lnearestpbili.png)
+![](../assets/proj1_img/task6_img/lnearestpnearest.png)

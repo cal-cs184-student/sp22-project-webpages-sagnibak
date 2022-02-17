@@ -15,4 +15,4 @@ it's a corner, 1 `MAYBE` and two `FALSE`s, or 1 `MAYBE` and two
 `TRUE`s). In the case the point is in the triangle, we update the
 sample buffer with the color of the triangle.
 
-![Image 4]("../assets/proj1_img/task1_img/task2_1.png")
+![Image 4](../assets/proj1_img/task1_img/task2_1.png)
