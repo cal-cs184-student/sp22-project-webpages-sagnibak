@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-16T23:59:23-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CS 184 Projects</title><subtitle>Computer Graphics at UC Berkeley</subtitle><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><entry><title type="html">Project 1</title><link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="Project 1" /><published>2022-02-14T00:00:00-08:00</published><updated>2022-02-14T00:00:00-08:00</updated><id>http://localhost:4000/project-1</id><content type="html" xml:base="http://localhost:4000/project-1"><![CDATA[<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-02-17T00:03:54-08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CS 184 Projects</title><subtitle>Computer Graphics at UC Berkeley</subtitle><author><name>Sagnik Bhattacharya and Catherine Huang</name></author><entry><title type="html">Project 1</title><link href="http://localhost:4000/project-1" rel="alternate" type="text/html" title="Project 1" /><published>2022-02-14T00:00:00-08:00</published><updated>2022-02-14T00:00:00-08:00</updated><id>http://localhost:4000/project-1</id><content type="html" xml:base="http://localhost:4000/project-1"><![CDATA[<p>This writeup is hosted at <a href="https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1">https://cal-cs184-student.github.io/sp22-project-webpages-sagnibak/project-1</a>.</p>
 
 <h2 id="part-1-rasterizing-single-color-triangles">Part 1: Rasterizing single-color triangles</h2>
 
@@ -17,7 +17,8 @@ it’s a corner, 1 <code class="language-plaintext highlighter-rouge">MAYBE</cod
 <code class="language-plaintext highlighter-rouge">TRUE</code>s). In the case the point is in the triangle, we update the
 sample buffer with the color of the triangle.</p>
 
-<p><img src="../assets/proj1_img/task1_img/task2_1.png" alt="Image 4" /></p>
+<p><img src="&quot;https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task1_img/task2_1.png&quot;" alt="Image 4" /></p>
+
 <h3 id="part-2-antialiasing-triangles">Part 2: Antialiasing triangles</h3>
 
 <p>To properly antialias, we resized the sample buffer by <code class="language-plaintext highlighter-rouge">sqrt{sampling_rate}</code> in both height and width dimensions. To avoid any potential floating point issues, we opted to scale our triangle up and traverse through the triangle in whole increments as opposed to keeping the triangle the same size and incrementing the traversals in fractional amounts. In the event that the point lies inside the triangle, we update the <code class="language-plaintext highlighter-rouge">sample buffer</code> to the color. Then, to render the image at the original size, in <code class="language-plaintext highlighter-rouge">resolve_to_framebuffer</code>, we take the average of <code class="language-plaintext highlighter-rouge">sampling rate</code> number of samples (a square that corresponds to one pixel) and update the <code class="language-plaintext highlighter-rouge">rgb_framebuffer</code> (the actual image rendering). This antialiases the triangles by providing inbetween colors. This can be seen as applying a filter ovr a pixel getting closer and closer to the true average color of the pixel.</p>
@@ -26,15 +27,15 @@ sample buffer with the color of the triangle.</p>
   <table style="width=100%">
     <tr>
       <td>
-        <img src="../assets/proj1_img/task2_img/task2_1.png" align="middle" width="400px" />
+        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_1.png" align="middle" width="400px" />
         <figcaption align="middle">Sample rate: 1.</figcaption>
       </td>
       <td>
-        &lt;img src="../assets/proj1_img/task2_img/task2_4.png"align="middle" width="400px"/&gt;
+        &lt;img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_4.png"align="middle" width="400px"/&gt;
         <figcaption align="middle">Sample rate: 4.</figcaption>
       </td>
        <td>
-        <img src="../assets/proj1_img/task2_img/task2_16.png" align="middle" width="400px" />
+        <img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task2_img/task2_16.png" align="middle" width="400px" />
         <figcaption align="middle">Sample rate: 16.</figcaption>
       </td>
     </tr>
@@ -46,7 +47,7 @@ sample buffer with the color of the triangle.</p>
 
 <p>For this, I was trying to get the robot’s right arm to wave. I accomplished this by rotating the arms.</p>
 
-<p><img src="../assets/proj1_img/task3_img/screenshot_2-16_15-50-48.png" alt="waving_robot" /></p>
+<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task3_img/screenshot_2-16_15-50-48.png" alt="waving_robot" /></p>
 <h2 id="task-4-barycentric-coordinates">Task 4: Barycentric Coordinates</h2>
 
 <p>Barycentric coordinates can be seen as a way to figure out the
@@ -57,7 +58,7 @@ of interest for us is color in this part, but it can also be used to
 help translate between image and texture coordinates by blending the
 texture coordinates at each of the vertices.</p>
 
-<p><img src="../assets/proj1_img/task4_img/color_triangle.png" alt="triangle_with_colors_at_vertices" /></p>
+<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task4_img/color_triangle.png" alt="triangle_with_colors_at_vertices" /></p>
 
 <p>The figure above demonstrates the blending of colors using barycentric
 coordinates. Each vertex is assigned a pure color: top is red $r$, left is
@@ -71,7 +72,7 @@ intuitive visualization of barycentric coordinates.</p>
 <p>Below is a screenshot of a color wheel made using triangles colored
 using barycentric coordinates to determine the color of the pixels.</p>
 
-<p><img src="../assets/proj1_img/task4_img/color_wheel.png" alt="color_wheel" /></p>
+<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task4_img/color_wheel.png" alt="color_wheel" /></p>
 
 <h2 id="pixel-sampling">Pixel Sampling</h2>
 
@@ -108,10 +109,10 @@ sharp transitions. On the other hand, bilinear sampling creates
 smoother gradients of colors, and also makes edges appear smoother
 even at lower sampling rates.</p>
 
-<p><img src="../assets/proj1_img/task5_img/nearest_1pp.png" alt="" />
-<img src="../assets/proj1_img/task5_img/bilinear_1pp.png" alt="" />
-<img src="../assets/proj1_img/task5_img/nearest_16pp.png" alt="" />
-<img src="../assets/proj1_img/task5_img/bilinear_16pp.png" alt="" /></p>
+<p><img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task5_img/nearest_1pp.png" alt="" />
+<img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task5_img/bilinear_1pp.png" alt="" />
+<img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task5_img/nearest_16pp.png" alt="" />
+<img src="https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task5_img/bilinear_16pp.png" alt="" /></p>
 
 <p>We believe that there will be a large difference between the
 performance of these two sampling algorithms when there is a large
