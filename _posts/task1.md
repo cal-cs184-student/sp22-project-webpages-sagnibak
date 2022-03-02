@@ -1,4 +1,4 @@
-## Part 1: Rasterizing single-color triangles
+## Task 1: Rasterizing single-color triangles
 
 We first finding a bounding box by calculating the minimum and maximum
 x and y coordinates. For each point, we determine whether it's inside
@@ -15,4 +15,4 @@ it's a corner, 1 `MAYBE` and two `FALSE`s, or 1 `MAYBE` and two
 `TRUE`s). In the case the point is in the triangle, we update the
 sample buffer with the color of the triangle.
 
-![Image 4]("https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task1_img/task2_1.png")
+![Image 4](assets/img/task1_1.png)

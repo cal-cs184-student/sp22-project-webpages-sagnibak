@@ -1,4 +1,4 @@
-## Part 6: Level sampling for texture mapping
+## Task 6: Level sampling for texture mapping
 
 We level sample to figure out the correct resolution of textures to
 use in our image. To write this helper function, we first calculate
@@ -32,4 +32,12 @@ sampling, where we need to access different mip maps stored in
 relatively faraway memory locations in a single function call.
 
 Below we show the differences of the required combinations of level
-and pixel sampling methods.
+and pixel sampling methods. As we can see, with a 1 pixel
+supersampling rate, level zero sampling leads to worse aliasing.
+Nearest level sampling leads to lower minification artifacts. Bilinear
+pixel sampling reduces aliasing compared to nearest pixel sampling.
+
+![](assets/img/l0pnearest.png)
+![](assets/img/l0pbili.png)
+![](assets/img/lnearestpnearest.png)
+![](assets/img/lnearestpbili.png)

@@ -1,4 +1,4 @@
-## Pixel Sampling
+## Task 5: Pixel Sampling
 
 Pixel sampling is the process of using the pixels of one image to
 color the pixels of another image, by sampling the pixels of the
@@ -33,10 +33,10 @@ sharp transitions. On the other hand, bilinear sampling creates
 smoother gradients of colors, and also makes edges appear smoother
 even at lower sampling rates.
 
-![](https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task5_img/nearest_1pp.png)
-![](https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task5_img/bilinear_1pp.png)
-![](https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task5_img/nearest_16pp.png)
-![](https://github.com/cal-cs184-student/sp22-project-webpages-sagnibak/tree/master/assets/proj1_img/task5_img/bilinear_16pp.png)
+![](assets/img/nearest_1pp.png)
+![](assets/img/bilinear_1pp.png)
+![](assets/img/nearest_16pp.png)
+![](assets/img/bilinear_16pp.png)
 
 We believe that there will be a large difference between the
 performance of these two sampling algorithms when there is a large
